@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import { GitBranch, ExternalLink, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import Link from "next/link";
 
 type ProjectType = {
   _id: string;
@@ -54,7 +55,7 @@ export function ProjectsSection({ projects }: { projects: ProjectType[] }) {
                 className={`flex flex-col gap-12 lg:gap-24 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
               >
                 {/* Image side */}
-                <div className="w-full lg:w-1/2 relative group cursor-pointer overflow-hidden rounded-2xl bg-secondary/10">
+                <Link href="/admin" className="w-full lg:w-1/2 relative group cursor-pointer overflow-hidden rounded-2xl bg-secondary/10 block">
                   <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-secondary/10 shadow-lg">
                     {(() => {
                       // Helper to format URL
@@ -88,7 +89,7 @@ export function ProjectsSection({ projects }: { projects: ProjectType[] }) {
                       <ArrowRight className="w-8 h-8" />
                     </div>
                   </div>
-                </div>
+                </Link>
                 
                 {/* Content side */}
                 <div className="w-full lg:w-1/2 flex flex-col justify-center">

@@ -44,7 +44,7 @@ export default async function Home() {
           <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out flex flex-col items-center text-center">
             <h2 className="text-xl md:text-2xl font-medium text-secondary mb-4">Hey, I'm a</h2>
             <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[8rem] leading-[1.0] tracking-tighter text-foreground pb-6 drop-shadow-lg flex flex-col items-center justify-center">
-              <span className="font-bold">Software</span>
+              <span className="font-normal">Software</span>
               <span className="font-bold text-accent">Engineer.</span>
             </h1>
             <p className="text-lg md:text-xl text-secondary/90 leading-relaxed font-medium max-w-2xl mx-auto mb-10 drop-shadow-md">
