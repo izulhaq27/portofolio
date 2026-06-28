@@ -88,7 +88,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-secondary uppercase tracking-wider mb-1">Email</h4>
-                    <a href="mailto:hello@example.com" className="text-foreground hover:text-accent transition-colors">
+                    <a href="mailto:muhammadfahrizulhah@gmail.com" className="text-foreground hover:text-accent transition-colors text-xs sm:text-sm md:text-base whitespace-nowrap">
                       muhammadfahrizulhah@gmail.com
                     </a>
                   </div>

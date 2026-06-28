@@ -16,18 +16,18 @@ export function Marquee() {
   ];
 
   return (
-    <div className="w-full overflow-hidden bg-foreground py-6 flex whitespace-nowrap">
-      <motion.div
-        className="flex gap-16 text-background pr-16"
-        animate={{
-          x: ["0%", "-50%"],
-        }}
-        transition={{
-          repeat: Infinity,
-          ease: "linear",
-          duration: 35,
-        }}
-      >
+    <div className="w-full overflow-hidden bg-foreground py-6 flex whitespace-nowrap relative">
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee-scroll {
+          animation: marquee 35s linear infinite;
+          will-change: transform;
+        }
+      `}</style>
+      <div className="flex gap-16 text-background pr-16 animate-marquee-scroll w-max">
         {/* Render multiple sets to ensure seamless looping */}
         {[...Array(4)].map((_, i) => (
           <div key={i} className="flex gap-16 items-center">
@@ -42,7 +42,7 @@ export function Marquee() {
             })}
           </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
