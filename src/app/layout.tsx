@@ -10,6 +10,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portofolio-mohfahriizulhaq.vercel.app"),
   title: "Moh. Fahri IzulHaq | Portfolio",
   description: "Portfolio of Moh. Fahri IzulHaq, Informatics Engineering Student.",
   keywords: ["Moh. Fahri IzulHaq", "Portfolio", "Full Stack Engineer", "UI/UX Designer", "Next.js"],
