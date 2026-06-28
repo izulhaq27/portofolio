@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "Moh. Fahri IzulHaq | Portfolio",
   description: "Portfolio of Moh. Fahri IzulHaq, Informatics Engineering Student.",
   keywords: ["Moh. Fahri IzulHaq", "Portfolio", "Full Stack Engineer", "UI/UX Designer", "Next.js"],
+  verification: {
+    google: "unr5i5hCAp1DqdcS7VkvajBMZRvgsC_mkp1JLps05No",
+  },
 };
 
 export default function RootLayout({
