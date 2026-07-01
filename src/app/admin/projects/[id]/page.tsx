@@ -69,7 +69,7 @@ export default function EditProjectPage({ params }: { params: { id: string } }) 
         technologies: formData.technologies.split(",").map(t => t.trim()).filter(Boolean)
       };
 
-      const res = await fetch(`/api/projects/${resolvedParams.id}`, {
+      const res = await fetch(`/api/projects/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
