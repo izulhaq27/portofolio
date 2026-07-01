@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Save, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
-export default function EditProjectPage({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = use(params);
+export default function EditProjectPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(true);
@@ -29,7 +29,7 @@ export default function EditProjectPage({ params }: { params: Promise<{ id: stri
         const res = await fetch("/api/projects");
         if (res.ok) {
           const data = await res.json();
-          const project = data.find((p: any) => p._id === resolvedParams.id);
+          const project = data.find((p: any) => p._id === id);
           if (project) {
             setFormData({
               title: project.title,
@@ -51,7 +51,7 @@ export default function EditProjectPage({ params }: { params: Promise<{ id: stri
       }
     };
     fetchProject();
-  }, [resolvedParams.id]);
+  }, [id]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
